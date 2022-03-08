@@ -1,0 +1,11 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'username.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Username _$UsernameFromJson(Map<String, dynamic> json) => Username();
+
+Map<String, dynamic> _$UsernameToJson(Username instance) => <String, dynamic>{};
