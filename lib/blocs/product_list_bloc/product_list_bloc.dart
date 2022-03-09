@@ -5,7 +5,6 @@ import 'package:poc/models/product/product.dart';
 import 'package:poc/repositories/product_repository.dart';
 
 part 'product_list_event.dart';
-
 part 'product_list_state.dart';
 
 class ProductListBloc extends Bloc<ProductListEvent, ProductListState> {

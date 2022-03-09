@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:poc/pages/count_page.dart';
 import 'package:poc/pages/splash_page.dart';
+import 'package:poc/utils/export/repositories.dart';
 import 'package:poc/utils/routes/constants.dart';
 import 'package:poc/utils/routes/router.dart';
-import 'package:poc/utils/export/repositories.dart';
 
 import 'blocs/authentication_bloc/authentication_bloc.dart';
 
@@ -20,7 +19,7 @@ class App extends StatelessWidget {
       initialRoute: splashRoute,
       home: Builder(
         builder: (context) {
-          return BlocConsumer<AuthenticationBloc, AuthenticationState>(
+          return BlocListener<AuthenticationBloc, AuthenticationState>(
               listener: (context, state) {
             switch (state.status) {
               case AuthenticationStatus.authenticated:
@@ -35,13 +34,7 @@ class App extends StatelessWidget {
               default:
                 break;
             }
-          }, builder: (context, state) {
-            if (state.status == AuthenticationStatus.authenticated) {
-              return const CountPage();
-            } else {
-              return const SplashPage();
-            }
-          });
+          }, child: const SplashPage());
         },
       ),
     );

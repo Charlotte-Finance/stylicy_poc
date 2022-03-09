@@ -1,17 +1,20 @@
 import 'dart:async';
 import 'dart:convert';
+
 import 'package:poc/utils/http/http_request.dart';
+import 'package:poc/utils/storage/secure_storage.dart';
 
 enum AuthenticationStatus { unknown, authenticated, unauthenticated }
 
 class AuthenticationRepository {
   final String url = "/auth/";
 
+  final _storage = SecureStorage();
   final _controller = StreamController<AuthenticationStatus>();
 
   Stream<AuthenticationStatus> get status async* {
-    await Future<void>.delayed(const Duration(seconds: 1));
-    yield AuthenticationStatus.unauthenticated;
+    String? token = await _storage.readSecureData('token');
+    yield token == null ?  AuthenticationStatus.unauthenticated : AuthenticationStatus.authenticated ;
     yield* _controller.stream;
   }
 
@@ -24,14 +27,13 @@ class AuthenticationRepository {
       endpoint: url + "login/",
       jsonBody: jsonBody,
     );
-    await Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _controller.add(AuthenticationStatus.authenticated),
-    );
+    _storage.writeSecureData('token', response['token']);
+    _controller.add(AuthenticationStatus.authenticated);
   }
 
-  void logOut() {
+  Future<void> logOut() async {
     _controller.add(AuthenticationStatus.unauthenticated);
+    _storage.deleteSecureData('token');
   }
 
   void dispose() => _controller.close();

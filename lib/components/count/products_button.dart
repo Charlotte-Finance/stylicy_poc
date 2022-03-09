@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:poc/utils/export/blocs.dart';
 
-import '../../blocs/counter_bloc/counter_bloc.dart';
 import '../../utils/routes/constants.dart';
 
 class ProductsButton extends StatelessWidget {

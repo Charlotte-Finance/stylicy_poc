@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:path_provider/path_provider.dart';
-import 'package:poc/utils/export/repositories.dart';
 import 'package:poc/utils/export/blocs.dart';
+import 'package:poc/utils/export/repositories.dart';
 
 import 'app.dart';
 

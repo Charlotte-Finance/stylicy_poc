@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../blocs/login_bloc/login_bloc.dart';
 import '../components/login/login_form.dart';
-import '../repositories/authentication_repository.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,7 +14,10 @@ class LoginPage extends StatelessWidget {
           title: const Text('Login'),
           automaticallyImplyLeading: false,
         ),
-        body: const Padding(padding: EdgeInsets.all(12), child: LoginForm()),
+        body: const Padding(
+          padding: EdgeInsets.all(12),
+          child: LoginForm(),
+        ),
       ),
     );
   }

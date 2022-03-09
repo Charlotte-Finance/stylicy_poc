@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'formz.dart';
+
 part 'password.g.dart';
 
 enum PasswordValidationError { empty }
