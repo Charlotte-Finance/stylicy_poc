@@ -38,12 +38,11 @@ class HttpRequest {
     }
   }
 
-  Future<dynamic> postRequest(
+  static Future<dynamic> postRequest(
       {required String endpoint, required String jsonBody}) async {
     Uri httpRequest = getUri(
       endpoint: endpoint,
     );
-
     try {
       final response = await http.post(
         httpRequest,
