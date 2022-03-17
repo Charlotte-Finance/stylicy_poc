@@ -18,7 +18,7 @@ class AuthenticationRepository {
     yield* _controller.stream;
   }
 
-  Future<void> logIn(String username, String password) async {
+  Future<void> logIn({required String username, required String password}) async {
     String jsonBody = jsonEncode(<String, String>{
       'username': 'mor_2314',
       'password': '83r5^_',
@@ -31,7 +31,7 @@ class AuthenticationRepository {
     _controller.add(AuthenticationStatus.authenticated);
   }
 
-  Future<void> logOut() async {
+  logOut() {
     _controller.add(AuthenticationStatus.unauthenticated);
     _storage.deleteSecureData('token');
   }
