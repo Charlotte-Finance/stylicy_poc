@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poc/blocs/authentication_bloc/authentication_bloc.dart';
-import 'package:poc/models/user/user.dart';
+import 'package:poc/blocs/login/authentication_bloc/authentication_bloc.dart';
+import 'package:poc/models/login/user/user.dart';
 
 class MockUser extends Mock implements User {}
 

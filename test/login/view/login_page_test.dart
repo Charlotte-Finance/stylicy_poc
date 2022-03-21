@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poc/components/login/login_form.dart';
-import 'package:poc/pages/login_page.dart';
-import 'package:poc/repositories/authentication_repository.dart';
+import 'package:poc/repositories/login/authentication_repository.dart';
 
 class MockAuthenticationRepository extends Mock
     implements AuthenticationRepository {}

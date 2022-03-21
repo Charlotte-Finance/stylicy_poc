@@ -1,10 +1,10 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poc/blocs/authentication_bloc/authentication_bloc.dart';
-import 'package:poc/models/user/user.dart';
-import 'package:poc/repositories/authentication_repository.dart';
-import 'package:poc/repositories/user_repository.dart';
+import 'package:poc/blocs/login/authentication_bloc/authentication_bloc.dart';
+import 'package:poc/models/login/user/user.dart';
+import 'package:poc/repositories/login/authentication_repository.dart';
+import 'package:poc/repositories/login/user_repository.dart';
 
 class MockAuthenticationRepository extends Mock
     implements AuthenticationRepository {}
@@ -45,7 +45,7 @@ void main() {
         authenticationRepository: authenticationRepository,
         userRepository: userRepository,
       ),
-      expect: () => const <AuthenticationState>[
+      expect: () =>  <AuthenticationState>[
         AuthenticationState.unauthenticated(),
       ],
     );
@@ -62,7 +62,7 @@ void main() {
         authenticationRepository: authenticationRepository,
         userRepository: userRepository,
       ),
-      expect: () => const <AuthenticationState>[
+      expect: () => <AuthenticationState>[
         AuthenticationState.authenticated(user),
       ],
     );
@@ -84,7 +84,7 @@ void main() {
       act: (bloc) => bloc.add(
         const AuthenticationStatusChanged(AuthenticationStatus.authenticated),
       ),
-      expect: () => const <AuthenticationState>[
+      expect: () => <AuthenticationState>[
         AuthenticationState.authenticated(user),
       ],
     );
@@ -103,7 +103,7 @@ void main() {
       act: (bloc) => bloc.add(
         const AuthenticationStatusChanged(AuthenticationStatus.unauthenticated),
       ),
-      expect: () => const <AuthenticationState>[
+      expect: () => <AuthenticationState>[
         AuthenticationState.unauthenticated(),
       ],
     );
@@ -120,7 +120,7 @@ void main() {
       act: (bloc) => bloc.add(
         const AuthenticationStatusChanged(AuthenticationStatus.authenticated),
       ),
-      expect: () => const <AuthenticationState>[
+      expect: () => <AuthenticationState>[
         AuthenticationState.unauthenticated(),
       ],
     );

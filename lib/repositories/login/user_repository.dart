@@ -1,6 +1,7 @@
 
-import 'package:poc/models/user/user.dart';
 import 'package:poc/utils/http/http_request.dart';
+
+import '../../models/login/user/user.dart';
 
 class UserRepository {
   final String url = "/users/";

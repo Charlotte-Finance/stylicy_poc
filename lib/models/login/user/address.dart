@@ -1,5 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:poc/models/user/geolocation.dart';
+
+import 'geolocation.dart';
+
+
 
 part 'address.g.dart';
 

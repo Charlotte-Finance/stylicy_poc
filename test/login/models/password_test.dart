@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poc/models/forms/password.dart';
+import 'package:poc/models/login/forms/password.dart';
 
 void main() {
   const passwordString = 'mock-password';

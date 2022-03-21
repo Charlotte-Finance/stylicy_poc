@@ -2,10 +2,13 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:poc/repositories/login/authentication_repository.dart';
+import 'package:poc/repositories/login/user_repository.dart';
 
-import '../../models/user/user.dart';
-import '../../repositories/authentication_repository.dart';
-import '../../repositories/user_repository.dart';
+import '../../../models/login/user/user.dart';
+
+
+
 
 part 'authentication_event.dart';
 part 'authentication_state.dart';

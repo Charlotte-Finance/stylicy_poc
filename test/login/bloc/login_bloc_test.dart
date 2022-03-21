@@ -1,11 +1,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poc/blocs/login_bloc/login_bloc.dart';
-import 'package:poc/models/forms/formz.dart';
-import 'package:poc/models/forms/password.dart';
-import 'package:poc/models/forms/username.dart';
-import 'package:poc/repositories/authentication_repository.dart';
+import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
+import 'package:poc/models/login/forms/formz.dart';
+import 'package:poc/models/login/forms/password.dart';
+import 'package:poc/models/login/forms/username.dart';
+import 'package:poc/repositories/login/authentication_repository.dart';
 
 class MockAuthenticationRepository extends Mock
     implements AuthenticationRepository {}

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poc/utils/export/pages.dart';
 
+import '../../pages/count_page.dart';
+import '../../pages/login/login_page.dart';
+import '../../pages/login/splash_page.dart';
+import '../../pages/product_page.dart';
 import 'constants.dart';
 
 class MyRouter {

@@ -1,8 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poc/blocs/login_bloc/login_bloc.dart';
-import 'package:poc/models/forms/formz.dart';
-import 'package:poc/models/forms/password.dart';
-import 'package:poc/models/forms/username.dart';
+import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
+
+import 'package:poc/models/login/forms/formz.dart';
+import 'package:poc/models/login/forms/password.dart';
+import 'package:poc/models/login/forms/username.dart';
 
 void main() {
   const username = Username.dirty('username');

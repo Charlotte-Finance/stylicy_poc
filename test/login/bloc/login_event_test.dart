@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poc/blocs/login_bloc/login_bloc.dart';
+import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
 
 void main() {
   const username = 'mock-username';

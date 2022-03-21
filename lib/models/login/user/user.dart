@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:poc/models/user/address.dart';
-import 'package:poc/models/user/name.dart';
+
+import 'name.dart';
+import 'address.dart';
 
 part 'user.g.dart';
 
