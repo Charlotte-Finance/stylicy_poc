@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:poc/models/product/rating.dart';
+import 'package:poc/models/products/rating.dart';
 
 part 'product.g.dart';
 

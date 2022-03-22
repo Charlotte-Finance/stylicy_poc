@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:poc/models/login/forms/username.dart';
-
 void main() {
   const usernameString = 'mock-username';
   group('Username', () {

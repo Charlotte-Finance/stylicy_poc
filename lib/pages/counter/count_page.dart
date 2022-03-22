@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:poc/components/count/counter_buttons.dart';
-import 'package:poc/components/count/products_button.dart';
-import 'package:poc/components/count/user_information.dart';
+
+import '../../components/counter/counter_buttons.dart';
+import '../../components/counter/products_button.dart';
+import '../../components/counter/user_information.dart';
 
 
 

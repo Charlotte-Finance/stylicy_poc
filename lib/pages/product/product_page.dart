@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:poc/blocs/product_list_bloc/product_list_bloc.dart';
-import 'package:poc/components/product/product_list.dart';
+
+import '../../blocs/products/product_list_bloc/product_list_bloc.dart';
+import '../../components/products/product_list.dart';
 
 
 class ProductPage extends StatelessWidget {

@@ -1,5 +1,7 @@
-import 'package:poc/models/product/product.dart';
-import 'package:poc/utils/http/http_request.dart';
+
+
+import '../../models/products/product.dart';
+import '../../utils/http/http_request.dart';
 
 class ProductRepository {
   final String url = "/products/";

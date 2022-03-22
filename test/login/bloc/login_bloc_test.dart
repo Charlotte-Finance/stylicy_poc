@@ -7,6 +7,7 @@ import 'package:poc/models/login/forms/password.dart';
 import 'package:poc/models/login/forms/username.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
+
 class MockAuthenticationRepository extends Mock
     implements AuthenticationRepository {}
 

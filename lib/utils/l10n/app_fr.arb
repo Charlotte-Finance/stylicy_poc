@@ -1,0 +1,71 @@
+{
+  "@@locale": "fr",
+  "email_form": "Adresse email",
+  "@email_form": {
+    "description": "Email form label"
+  },
+  "first_name_form": "Prénom",
+  "@first_name_form": {
+    "description": "First name form label"
+  },
+  "forget_pwd_button": "Mot de passe oublié ?",
+  "@forget_pwd_button": {
+    "description": "Label for forgotten password button"
+  },
+  "last_name_form": "Nom",
+  "@last_name_form": {
+    "description": "Last name form label"
+  },
+  "password_form": "Mot de passe",
+  "@password_form": {
+    "description": "Password form label"
+  },
+  "platforms_login": "Ou se connecter avec",
+  "@platforms_login": {
+    "description": "Connect with another platform label"
+  },
+  "register_button": "Rejoindre Stylicy",
+  "@register_button": {
+    "description": "Register Button label"
+  },
+  "register_conditions": "En vous inscrivant à Stylicy, vous confirmez que vous avez lu et accepté nos conditions générales, notre politique de confidentialité et notre politique en matière de cookies, et vous acceptez de recevoir des mises à jour par courrier électronique de la part de Stylicy.",
+  "@register_conditions": {
+    "description": "Terms of conditions to register"
+  },
+  "register_tab": "Inscription",
+  "@register_tab": {
+    "description": "Register tab label"
+  },
+  "repeat_pwd_form": "Répéter le mot de passe",
+  "@repeat_pwd_form": {
+    "description": "Repeat password form label"
+  },
+  "reset_pwd_button": "Réinitialiser votre mot de passe",
+  "@reset_pwd_button": {
+    "description": "Reset password button label"
+  },
+  "reset_pwd": "Mot de passe oublié",
+  "@reset_pwd": {
+    "description": "Reset password title"
+  },
+  "reset_pwd_instructions": "Confirmer votre adresse email et nous vous enverrons un lien de réinitialisation.",
+  "@reset_pwd_instructions": {
+    "description": "Instructions to reset password"
+  },
+  "sign_in_button": "Connexion",
+  "@sign_in_button": {
+    "description": "Sign in button label"
+  },
+  "sign_in_tab": "Connexion",
+  "@sign_in_tab": {
+    "description": "Sin in tab label"
+  },
+  "skip_login": "Passer cette étape",
+  "@skip_login": {
+    "description": "Skip login button label"
+  },
+  "splash_title": "Bonjour Monde",
+  "@splash_title": {
+    "description": "Hello world"
+  }
+}

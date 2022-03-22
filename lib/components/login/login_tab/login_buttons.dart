@@ -12,12 +12,12 @@ class _LoginButtons extends StatelessWidget {
           onPressed: () {},
           child: SizedBox(
             width: size.width,
-            child: const Center(child: Text(LoginStrings.signInAction)),
+            child: Center(child: Text(AppLocalizations.of(context)!.sign_in_button)),
           ),
         ),
         TextButton(
           onPressed: () {},
-          child: const Text(LoginStrings.skipLogin),
+          child: Text(AppLocalizations.of(context)!.skip_login),
         ),
       ],
     );

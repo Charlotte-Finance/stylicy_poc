@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../blocs/counter_bloc/counter_bloc.dart';
+import '../../blocs/counter/counter_bloc.dart';
 
 class CounterButtons extends StatelessWidget {
   const CounterButtons({Key? key}) : super(key: key);

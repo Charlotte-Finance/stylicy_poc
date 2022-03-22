@@ -1,8 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:poc/utils/http/http_request.dart';
-import 'package:poc/utils/storage/secure_storage.dart';
+import '../../utils/http/http_request.dart';
+import '../../utils/storage/secure_storage.dart';
+
 
 enum AuthenticationStatus { unknown, authenticated, unauthenticated }
 

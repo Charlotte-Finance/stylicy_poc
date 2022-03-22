@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:poc/utils/constants/colors.dart';
-import 'package:poc/utils/constants/fonts.dart';
-import 'package:poc/utils/constants/text_styles.dart';
 
-
-part 'widgets.dart';
+import '../utils/constants/colors.dart';
+import '../utils/constants/fonts.dart';
+import '../utils/constants/text_styles.dart';
 
 part 'texts.dart';
+part 'widgets.dart';
 
 ThemeData myTheme = ThemeData(
   scaffoldBackgroundColor: MyColors.white,

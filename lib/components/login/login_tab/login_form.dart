@@ -7,23 +7,23 @@ class _LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 10, bottom: 10),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, bottom: 10),
           child: TextField(
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.alternate_email_outlined),
-              labelText: LoginStrings.email,
+                prefixIcon: const Icon(Icons.alternate_email_outlined),
+                labelText: AppLocalizations.of(context)!.email_form,
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(top: 10, bottom: 10),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, bottom: 10),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.lock),
-              suffixIcon: Icon(Icons.visibility_outlined),
-              labelText: LoginStrings.password,
+                prefixIcon: const Icon(Icons.lock),
+                suffixIcon: const Icon(Icons.visibility_outlined),
+                labelText: AppLocalizations.of(context)!.password_form,
             ),
           ),
         ),
@@ -40,7 +40,8 @@ class _LoginForm extends StatelessWidget {
                     return const _ForgotPasswordPopUp();
                   });
             },
-            child: const Text(LoginStrings.pwdForgot),
+            child: Text(AppLocalizations.of(context)!.forget_pwd_button,
+            ),
           ),
         ),
       ],

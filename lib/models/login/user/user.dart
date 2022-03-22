@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'name.dart';
 import 'address.dart';
+import 'name.dart';
 
 part 'user.g.dart';
 

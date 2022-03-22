@@ -1,12 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:poc/models/login/forms/formz.dart';
-import 'package:poc/models/login/forms/password.dart';
-import 'package:poc/models/login/forms/username.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
-
+import '../../../models/login/forms/formz.dart';
+import '../../../models/login/forms/password.dart';
+import '../../../models/login/forms/username.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';

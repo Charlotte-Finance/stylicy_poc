@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:poc/components/widgets/text_divider.dart';
-import 'package:poc/utils/constants/colors.dart';
-import 'package:poc/utils/constants/strings/login_strings.dart';
-import 'package:poc/utils/styles/theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../styles/theme.dart';
+import '../../utils/constants/colors.dart';
+import '../app/text_divider.dart';
+
+part 'login_tab/forgot_pwd_popup.dart';
 part 'login_tab/login_buttons.dart';
 part 'login_tab/login_form.dart';
 part 'login_tab/login_platforms.dart';
-part 'login_tab/forgot_pwd_popup.dart';
 
 class LoginTab extends StatelessWidget {
   const LoginTab({Key? key}) : super(key: key);

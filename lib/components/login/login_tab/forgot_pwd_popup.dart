@@ -14,20 +14,20 @@ class _ForgotPasswordPopUp extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                LoginStrings.resetPwdTitle,
+                AppLocalizations.of(context)!.reset_pwd,
                 style: Theme.of(context).textTheme.titleLarge!,
               ),
               const SizedBox(height: 5),
-              const Center(
+              Center(
                 child:
-                    Text(LoginStrings.resetPwdInstruction),
+                    Text(AppLocalizations.of(context)!.reset_pwd_instructions, textAlign: TextAlign.center,),
               ),
               const SizedBox(height: 20),
-              const Padding(
-                padding: EdgeInsets.only(left: 25, right: 25),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: LoginStrings.email,
+                    labelText: AppLocalizations.of(context)!.email_form,
                   ),
                 ),
               ),
@@ -46,9 +46,9 @@ class _ForgotPasswordPopUp extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: const Text(
-                        LoginStrings.resetPwdAction,
-                        style: TextStyle(color:MyColors.white,),
+                      child: Text(
+                        AppLocalizations.of(context)!.reset_pwd_button,
+                        style: const TextStyle(color:MyColors.white,),
                       ),
                     ),
                   ],

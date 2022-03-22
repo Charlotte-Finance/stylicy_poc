@@ -1,5 +1,6 @@
 part of '../register_tab.dart';
 
+
 class _RegisterConditions extends StatelessWidget {
   const _RegisterConditions({Key? key}) : super(key: key);
 
@@ -9,7 +10,7 @@ class _RegisterConditions extends StatelessWidget {
       children: [
         const Divider(),
         Text(
-          LoginStrings.conditions,
+          AppLocalizations.of(context)!.register_conditions,
           style: Theme.of(context).textTheme.bodySmall!,
           textAlign: TextAlign.justify,
         )

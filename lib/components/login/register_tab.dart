@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:poc/utils/constants/strings/login_strings.dart';
 
+import '../../utils/constants/strings/login_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-part 'register_tab/register_form.dart';
 part 'register_tab/register_buttons.dart';
 part 'register_tab/register_conditions.dart';
+part 'register_tab/register_form.dart';
 
 class RegisterTab extends StatelessWidget {
   const RegisterTab({Key? key}) : super(key: key);

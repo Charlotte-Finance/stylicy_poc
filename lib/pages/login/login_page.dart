@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poc/components/login/login_tab.dart';
-import 'package:poc/components/login/register_tab.dart';
-import 'package:poc/components/widgets/logos.dart';
-import 'package:poc/utils/constants/strings/login_strings.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../components/app/logos.dart';
+import '../../components/login/login_tab.dart';
+import '../../components/login/register_tab.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -68,9 +69,17 @@ class _LoginTabState extends State<_LoginTab>
         SizedBox(
           width: size.width * 0.6,
           child: TabBar(
-            tabs: const [
-              Tab(child: Text(LoginStrings.signInTab)),
-              Tab(child: Text(LoginStrings.registerTab))
+            tabs: [
+              Tab(
+                child: FittedBox(
+                  child: Text(AppLocalizations.of(context)!.sign_in_tab),
+                ),
+              ),
+              Tab(
+                child: FittedBox(
+                  child: Text(AppLocalizations.of(context)!.register_tab),
+                ),
+              ),
             ],
             controller: _tabController,
             indicatorSize: TabBarIndicatorSize.label,

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:poc/models/product/product.dart';
+import 'package:poc/models/products/product.dart';
 
 class ProductList extends StatelessWidget {
   final List<Product> products;

@@ -1,0 +1,71 @@
+{
+  "@@locale": "de",
+  "email_form": "E-mail-Adresse",
+  "@email_form": {
+    "description": "Email form label"
+  },
+  "first_name_form": "Vorname",
+  "@first_name_form": {
+    "description": "First name form label"
+  },
+  "forget_pwd_button": "Haben Sie Ihr Passwort vergessen?",
+  "@forget_pwd_button": {
+    "description": "Label for forgotten password button"
+  },
+  "last_name_form": "Nachname",
+  "@last_name_form": {
+    "description": "Last name form label"
+  },
+  "password_form": "Passwort",
+  "@password_form": {
+    "description": "Password form label"
+  },
+  "platforms_login": "Oder mach mit",
+  "@platforms_login": {
+    "description": "Connect with another platform label"
+  },
+  "register_button": "Treten Sie Stylicy bei",
+  "@register_button": {
+    "description": "Register Button label"
+  },
+  "register_conditions": "Indem Sie Stylicy beitreten, bestätigen Sie, dass Sie unsere Allgemeinen Geschäftsbedingungen, Datenschutzbestimmungen und Cookie-Richtlinien gelesen und akzeptiert haben und dass Sie E-Mail-Updates von Stylicy erhalten.\n",
+  "@register_conditions": {
+    "description": "Terms of conditions to register"
+  },
+  "register_tab": "registrieren",
+  "@register_tab": {
+    "description": "Register tab label"
+  },
+  "repeat_pwd_form": "Passwort wiederholen",
+  "@repeat_pwd_form": {
+    "description": "Repeat password form label"
+  },
+  "reset_pwd_button": "Setze dein Passwort zurück",
+  "@reset_pwd_button": {
+    "description": "Reset password button label"
+  },
+  "reset_pwd": "Passwort vergessen",
+  "@reset_pwd": {
+    "description": "Reset password title"
+  },
+  "reset_pwd_instructions": "Bestätigen Sie Ihre E-Mail und wir senden Ihnen einen Link zur Anfrage.",
+  "@reset_pwd_instructions": {
+    "description": "Instructions to reset password"
+  },
+  "sign_in_button": "Anmelden",
+  "@sign_in_button": {
+    "description": "Sign in button label"
+  },
+  "sign_in_tab": "Anmelden",
+  "@sign_in_tab": {
+    "description": "Sin in tab label"
+  },
+  "skip_login": "Überspringe diesen Schritt",
+  "@skip_login": {
+    "description": "Skip login button label"
+  },
+  "splash_title": "Hallo World",
+  "@splash_title": {
+    "description": "Hello world"
+  }
+}

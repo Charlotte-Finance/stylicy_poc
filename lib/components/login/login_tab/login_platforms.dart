@@ -7,7 +7,7 @@ class _LoginPlatforms extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const TextDivider(text: LoginStrings.platformsLogin),
+        TextDivider(text: AppLocalizations.of(context)!.platforms_login),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

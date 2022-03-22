@@ -6,44 +6,44 @@ class _RegisterForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         Padding(
-          padding: EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 5, bottom: 5),
           child: TextField(
-            key: Key('registerForm_firstnameInput_textField'),
+            key: const Key('registerForm_firstnameInput_textField'),
             decoration: InputDecoration(
-              labelText: 'FIRST NAME',
+              labelText: AppLocalizations.of(context)!.first_name_form,
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 5, bottom: 5),
           child: TextField(
-            key: Key('registerForm_lastnameInput_textField'),
+            key: const Key('registerForm_lastnameInput_textField'),
             decoration: InputDecoration(
-              labelText: 'LAST NAME',
+              labelText: AppLocalizations.of(context)!.last_name_form,
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 5, bottom: 5),
           child: TextField(
-            key: Key('registerForm_passwordInput_textField'),
+            key: const Key('registerForm_passwordInput_textField'),
             obscureText: true,
             decoration: InputDecoration(
-              suffixIcon: Icon(Icons.visibility_outlined),
-              labelText: 'PASSWORD',
+              suffixIcon: const Icon(Icons.visibility_outlined),
+              labelText: AppLocalizations.of(context)!.password_form,
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 5, bottom: 5),
           child: TextField(
-            key: Key('registerForm_repeatPasswordInput_textField'),
+            key: const Key('registerForm_repeatPasswordInput_textField'),
             obscureText: true,
             decoration: InputDecoration(
-              suffixIcon: Icon(Icons.visibility_outlined),
-              labelText: 'REPEAT PASSWORD',
+              suffixIcon: const Icon(Icons.visibility_outlined),
+              labelText: AppLocalizations.of(context)!.repeat_pwd_form,
             ),
           ),
         ),

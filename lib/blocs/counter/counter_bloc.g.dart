@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'counter_bloc.dart';
+part of '../../blocs/counter/counter_bloc.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

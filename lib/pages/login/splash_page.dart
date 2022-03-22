@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:poc/components/widgets/logos.dart';
-import 'package:poc/utils/constants/colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../components/app/logos.dart';
+import '../../utils/constants/colors.dart';
 
 
 class SplashPage extends StatelessWidget {

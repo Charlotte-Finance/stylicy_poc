@@ -12,7 +12,7 @@ class _RegisterButtons extends StatelessWidget {
           onPressed: () {},
           child: SizedBox(
             width: size.width,
-            child: const Center(child: Text(LoginStrings.registerAction)),
+            child: Center(child: Text(AppLocalizations.of(context)!.register_button)),
           ),
         ),
       ],
