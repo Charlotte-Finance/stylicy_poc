@@ -8,42 +8,23 @@ class _RegisterForm extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 5, bottom: 5),
-          child: TextField(
-            key: const Key('registerForm_firstnameInput_textField'),
-            decoration: InputDecoration(
-              labelText: AppLocalizations.of(context)!.first_name_form,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 5, bottom: 5),
-          child: TextField(
-            key: const Key('registerForm_lastnameInput_textField'),
-            decoration: InputDecoration(
-              labelText: AppLocalizations.of(context)!.last_name_form,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 10, bottom: 10),
           child: TextField(
             key: const Key('registerForm_passwordInput_textField'),
             obscureText: true,
             decoration: InputDecoration(
-              suffixIcon: const Icon(Icons.visibility_outlined),
-              labelText: AppLocalizations.of(context)!.password_form,
+              labelText: AppLocalizations.of(context)!.email_form.toUpperCase(),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 5, bottom: 5),
+          padding: const EdgeInsets.only(top: 10, bottom: 10),
           child: TextField(
             key: const Key('registerForm_repeatPasswordInput_textField'),
             obscureText: true,
             decoration: InputDecoration(
               suffixIcon: const Icon(Icons.visibility_outlined),
-              labelText: AppLocalizations.of(context)!.repeat_pwd_form,
+              labelText: AppLocalizations.of(context)!.password_form.toUpperCase(),
             ),
           ),
         ),

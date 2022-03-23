@@ -14,44 +14,47 @@ class LoginPage extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: null,
-        body: Column(
-          children: [
-            Expanded(
-              flex: 11,
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.close),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: size.height * 0.11,
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.close),
+                  ),
                 ),
               ),
-            ),
-            const Expanded(flex: 13, child: Center(child: StylicyLogo())),
-            Expanded(
-              flex: 76,
-              child: SizedBox(
-                width: size.width * 0.8,
-                child: const _LoginTab(),
+              SizedBox(
+                height: size.height * 0.13,
+                child: const Center(child: StylicyLogo()),
               ),
-            ),
-            const Expanded(flex: 9, child: SizedBox.shrink()),
-          ],
+              SizedBox(
+                height: size.height * 0.74,
+                child: const _PageContent(),
+              ),
+              SizedBox(
+                height: size.height * 0.02,
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-class _LoginTab extends StatefulWidget {
-  const _LoginTab({Key? key}) : super(key: key);
+class _PageContent extends StatefulWidget {
+  const _PageContent({Key? key}) : super(key: key);
 
   @override
-  _LoginTabState createState() => _LoginTabState();
+  _PageContentState createState() => _PageContentState();
 }
 
-class _LoginTabState extends State<_LoginTab>
+class _PageContentState extends State<_PageContent>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -66,8 +69,11 @@ class _LoginTabState extends State<_LoginTab>
     final size = MediaQuery.of(context).size;
     return Column(
       children: [
-        SizedBox(
-          width: size.width * 0.6,
+        Padding(
+          padding: EdgeInsets.only(
+            left: size.width * 0.2,
+            right: size.width * 0.2,
+          ),
           child: TabBar(
             tabs: [
               Tab(

@@ -8,11 +8,15 @@ class _LoginButtons extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        OutlinedButton(
+        ElevatedButton(
           onPressed: () {},
           child: SizedBox(
             width: size.width,
-            child: Center(child: Text(AppLocalizations.of(context)!.sign_in_button)),
+            child: Center(
+              child: Text(
+                AppLocalizations.of(context)!.sign_in_button.toUpperCase(),
+              ),
+            ),
           ),
         ),
         TextButton(

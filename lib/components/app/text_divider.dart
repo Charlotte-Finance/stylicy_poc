@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/constants/text_styles.dart';
 
 class TextDivider extends StatelessWidget {
   final String text;
@@ -10,14 +9,14 @@ class TextDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(child: Divider()),
+        const Expanded(child: Divider(thickness: 0.75,)),
         Padding(
           padding: const EdgeInsets.only(left: 5, right: 5),
           child: FittedBox(
-            child: Text(text, style: TextStyles.dividerStyle),
+            child: Text(text),
           ),
         ),
-        const Expanded(child: Divider()),
+        const Expanded(child: Divider(thickness: 0.75,)),
       ],
     );
   }

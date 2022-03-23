@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../components/app/logos.dart';
-import '../../utils/constants/colors.dart';
 
 
 class SplashPage extends StatelessWidget {
@@ -15,8 +14,8 @@ class SplashPage extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.background,
         appBar: null,
-        backgroundColor: MyColors.lightPrimary,
         body: Column(
           children: [
             SizedBox(height: size.height / 3),

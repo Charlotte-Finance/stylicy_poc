@@ -1,19 +1,18 @@
 part of '../register_tab.dart';
 
-
 class _RegisterConditions extends StatelessWidget {
   const _RegisterConditions({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Divider(),
-        Text(
+        AutoSizeText(
           AppLocalizations.of(context)!.register_conditions,
-          style: Theme.of(context).textTheme.bodySmall!,
-          textAlign: TextAlign.justify,
-        )
+          maxLines: 5,
+        ),
       ],
     );
   }

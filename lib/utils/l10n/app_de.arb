@@ -1,20 +1,16 @@
 {
   "@@locale": "de",
+  "close_reset": "IN ORDNUNG",
+  "@close_reset": {
+    "description": "Title of the button to close the reset pop up"
+  },
   "email_form": "E-mail-Adresse",
   "@email_form": {
     "description": "Email form label"
   },
-  "first_name_form": "Vorname",
-  "@first_name_form": {
-    "description": "First name form label"
-  },
   "forget_pwd_button": "Haben Sie Ihr Passwort vergessen?",
   "@forget_pwd_button": {
     "description": "Label for forgotten password button"
-  },
-  "last_name_form": "Nachname",
-  "@last_name_form": {
-    "description": "Last name form label"
   },
   "password_form": "Passwort",
   "@password_form": {
@@ -36,17 +32,21 @@
   "@register_tab": {
     "description": "Register tab label"
   },
-  "repeat_pwd_form": "Passwort wiederholen",
-  "@repeat_pwd_form": {
-    "description": "Repeat password form label"
+  "reset_mail_instructions": "Wir haben Ihnen eine E-Mail geschickt, um Ihr Passwort zurückzusetzen. Das Senden der E-Mail kann einige Minuten dauern. Vergiss nicht, deinen SPAM-Ordner zu überprüfen.",
+  "@reset_mail_instructions": {
+    "description": "Instruction about receiving the reset password mail"
   },
-  "reset_pwd_button": "Setze dein Passwort zurück",
-  "@reset_pwd_button": {
-    "description": "Reset password button label"
+  "reset_mail_sent": "E-Mail gesendet",
+  "@reset_mail_sent": {
+    "description": "Confirmation message when the reset mail is sent"
   },
   "reset_pwd": "Passwort vergessen",
   "@reset_pwd": {
     "description": "Reset password title"
+  },
+  "reset_pwd_button": "Setze dein Passwort zurück",
+  "@reset_pwd_button": {
+    "description": "Reset password button label"
   },
   "reset_pwd_instructions": "Bestätigen Sie Ihre E-Mail und wir senden Ihnen einen Link zur Anfrage.",
   "@reset_pwd_instructions": {
@@ -63,9 +63,5 @@
   "skip_login": "Überspringe diesen Schritt",
   "@skip_login": {
     "description": "Skip login button label"
-  },
-  "splash_title": "Hallo World",
-  "@splash_title": {
-    "description": "Hello world"
   }
 }

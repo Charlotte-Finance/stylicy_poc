@@ -1,20 +1,16 @@
 {
   "@@locale": "en",
+  "close_reset": "OK",
+  "@close_reset": {
+    "description": "Title of the button to close the reset pop up"
+  },
   "email_form": "Email address",
   "@email_form": {
     "description": "Email form label"
   },
-  "first_name_form": "First Name",
-  "@first_name_form": {
-    "description": "First name form label"
-  },
   "forget_pwd_button": "Forgot your password ?",
   "@forget_pwd_button": {
     "description": "Label for forgotten password button"
-  },
-  "last_name_form": "Last Name",
-  "@last_name_form": {
-    "description": "Last name form label"
   },
   "password_form": "Password",
   "@password_form": {
@@ -36,17 +32,21 @@
   "@register_tab": {
     "description": "Register tab label"
   },
-  "repeat_pwd_form": "Repeat password",
-  "@repeat_pwd_form": {
-    "description": "Repeat password form label"
+  "reset_mail_instructions": "We have sent you an email to reset your password. It may take several minutes to send the email. Don't forget to check your SPAM folder.",
+  "@reset_mail_instructions": {
+    "description": "Instruction about receiving the reset password mail"
   },
-  "reset_pwd_button": "Reset your password",
-  "@reset_pwd_button": {
-    "description": "Reset password button label"
+  "reset_mail_sent": "Mail sent",
+  "@reset_mail_sent": {
+    "description": "Confirmation message when the reset mail is sent"
   },
   "reset_pwd": "Password forgotten",
   "@reset_pwd": {
     "description": "Reset password title"
+  },
+  "reset_pwd_button": "Reset your password",
+  "@reset_pwd_button": {
+    "description": "Reset password button label"
   },
   "reset_pwd_instructions": "Confirm your email and we will send a request link.",
   "@reset_pwd_instructions": {
@@ -63,9 +63,5 @@
   "skip_login": "Skip this step",
   "@skip_login": {
     "description": "Skip login button label"
-  },
-  "splash_title": "Hello World",
-  "@splash_title": {
-    "description": "Hello world"
   }
 }

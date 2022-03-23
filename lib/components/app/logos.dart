@@ -8,9 +8,9 @@ class StylicyLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ToDo : Replace by Logo
-    return Text(
+    return const Text(
       "Stylicy",
-      style: Theme.of(context).textTheme.displayMedium!
+      style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold, fontFamily: 'Museo Sans 100'),
     );
   }
 }

@@ -19,6 +19,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: MyBehavior(),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -52,10 +53,18 @@ class App extends StatelessWidget {
                 //     break;
                 // }
               },
-              //child: const SplashPage());
-          child: const LoginPage());
+              child: const LoginPage());
+          //child: const SplashPage());
         },
       ),
     );
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }

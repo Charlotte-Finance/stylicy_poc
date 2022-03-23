@@ -12,7 +12,7 @@ class _LoginForm extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.alternate_email_outlined),
-                labelText: AppLocalizations.of(context)!.email_form,
+                labelText: AppLocalizations.of(context)!.email_form.toUpperCase(),
             ),
           ),
         ),
@@ -23,21 +23,22 @@ class _LoginForm extends StatelessWidget {
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.lock),
                 suffixIcon: const Icon(Icons.visibility_outlined),
-                labelText: AppLocalizations.of(context)!.password_form,
+                labelText: AppLocalizations.of(context)!.password_form.toUpperCase(),
             ),
           ),
         ),
         Align(
           alignment: Alignment.centerRight,
           child: TextButton(
-            style: greyButtonStyle,
             onPressed: () {
               showModalBottomSheet(
+                  enableDrag: false,
+                  isScrollControlled: true,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
                   context: context,
                   builder: (builder) {
-                    return const _ForgotPasswordPopUp();
+                    return const ResetPasswordPopUp();
                   });
             },
             child: Text(AppLocalizations.of(context)!.forget_pwd_button,
