@@ -4,6 +4,10 @@
   "@close_reset": {
     "description": "Title of the button to close the reset pop up"
   },
+  "designers_tab": "นักออกแบบ",
+  "@designers_tab": {
+    "description": "Designers Tab label"
+  },
   "email_form": "ที่อยู่อีเมล",
   "@email_form": {
     "description": "Email form label"
@@ -11,6 +15,14 @@
   "forget_pwd_button": "ลืมรหัสผ่านของคุณ?",
   "@forget_pwd_button": {
     "description": "Label for forgotten password button"
+  },
+  "home_tab": "หน้าหลัก",
+  "@home_tab": {
+    "description": "Home Tab label"
+  },
+  "men_tab": "ผู้ชาย",
+  "@men_tab": {
+    "description": "Men Tab label"
   },
   "password_form": "รหัสผ่าน",
   "@password_form": {
@@ -63,5 +75,9 @@
   "skip_login": "ข้ามขั้นตอนนี้",
   "@skip_login": {
     "description": "Skip login button label"
+  },
+  "stores_tab": "ร้านค้า",
+  "@stores_tab": {
+    "description": "Stores Tab label"
   }
 }

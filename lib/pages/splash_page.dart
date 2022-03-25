@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../components/app/logos.dart';
+import '../components/app/logos.dart';
 
 
 class SplashPage extends StatelessWidget {
+  static Route route() {
+    return MaterialPageRoute<void>(builder: (_) => const SplashPage());
+  }
+
   const SplashPage({Key? key}) : super(key: key);
 
   @override

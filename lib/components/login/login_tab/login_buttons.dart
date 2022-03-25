@@ -5,11 +5,35 @@ class _LoginButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        ElevatedButton(
-          onPressed: () {},
+        const _LoginButton(),
+        TextButton(
+          onPressed: () {
+            context.read<LoginBloc>().add(const LoginSkipped());
+          },
+          child: Text(AppLocalizations.of(context)!.skip_login),
+        ),
+      ],
+    );
+  }
+}
+
+class _LoginButton extends StatelessWidget {
+  const _LoginButton();
+
+  @override
+  Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return BlocBuilder<LoginBloc, LoginState>(
+      buildWhen: (previous, current) => previous.status != current.status,
+      builder: (context, state) {
+        return ElevatedButton(
+          onPressed: state.status.isValidated
+              ? () {
+                  context.read<LoginBloc>().add(const LoginSubmitted());
+                }
+              : null,
           child: SizedBox(
             width: size.width,
             child: Center(
@@ -18,12 +42,8 @@ class _LoginButtons extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        TextButton(
-          onPressed: () {},
-          child: Text(AppLocalizations.of(context)!.skip_login),
-        ),
-      ],
+        );
+      },
     );
   }
 }

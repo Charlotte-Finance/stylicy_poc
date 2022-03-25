@@ -2,9 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
 import 'package:poc/models/login/forms/formz.dart';
 import 'package:poc/models/login/forms/password.dart';
-import 'package:poc/models/login/forms/username.dart';
+import 'package:poc/models/login/forms/email.dart';
 void main() {
-  const username = Username.dirty('username');
+  const email = Email.dirty('email');
   const password = Password.dirty('password');
   group('LoginState', () {
     test('supports value comparisons', () {
@@ -22,10 +22,10 @@ void main() {
       );
     });
 
-    test('returns object with updated username when username is passed', () {
+    test('returns object with updated email when email is passed', () {
       expect(
-        const LoginState().copyWith(username: username),
-        const LoginState(username: username),
+        const LoginState().copyWith(email: email),
+        const LoginState(email: email),
       );
     });
 

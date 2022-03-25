@@ -1,18 +1,18 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
 void main() {
-  const username = 'mock-username';
+  const email = 'mock-email';
   const password = 'mock-password';
   group('LoginEvent', () {
-    group('LoginUsernameChanged', () {
+    group('LoginEmailChanged', () {
       test('supports value comparisons', () {
-        expect(const LoginUsernameChanged(username), const LoginUsernameChanged(username));
+        expect(const LoginEmailChanged(email:email), const LoginEmailChanged(email:email));
       });
     });
 
     group('LoginPasswordChanged', () {
       test('supports value comparisons', () {
-        expect(const LoginPasswordChanged(password), const LoginPasswordChanged(password));
+        expect(const LoginPasswordChanged(password:password), const LoginPasswordChanged(password:password));
       });
     });
 

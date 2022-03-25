@@ -4,7 +4,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:poc/blocs/login/login_bloc/login_bloc.dart';
 import 'package:poc/models/login/forms/formz.dart';
 import 'package:poc/models/login/forms/password.dart';
-import 'package:poc/models/login/forms/username.dart';
+import 'package:poc/models/login/forms/email.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
 
@@ -33,7 +33,7 @@ void main() {
         setUp: () {
           when(
             () => authenticationRepository.logIn(
-              username: 'username',
+              email: 'email',
               password: 'password',
             ),
           ).thenAnswer((_) => Future.value('user'));
@@ -43,27 +43,27 @@ void main() {
         ),
         act: (bloc) {
           bloc
-            ..add(const LoginUsernameChanged('username'))
-            ..add(const LoginPasswordChanged('password'))
+            ..add(const LoginEmailChanged(email:'email'))
+            ..add(const LoginPasswordChanged(password:'password'))
             ..add(const LoginSubmitted());
         },
         expect: () => const <LoginState>[
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             status: FormzStatus.invalid,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.valid,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.submissionInProgress,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.submissionSuccess,
           ),
@@ -75,7 +75,7 @@ void main() {
         setUp: () {
           when(
             () => authenticationRepository.logIn(
-              username: 'username',
+              email: 'email',
               password: 'password',
             ),
           ).thenThrow(Exception('oops'));
@@ -85,27 +85,27 @@ void main() {
         ),
         act: (bloc) {
           bloc
-            ..add(const LoginUsernameChanged('username'))
-            ..add(const LoginPasswordChanged('password'))
+            ..add(const LoginEmailChanged(email:'email'))
+            ..add(const LoginPasswordChanged(password:'password'))
             ..add(const LoginSubmitted());
         },
         expect: () => const <LoginState>[
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             status: FormzStatus.invalid,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.valid,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.submissionInProgress,
           ),
           LoginState(
-            username: Username.dirty('username'),
+            email: Email.dirty('email'),
             password: Password.dirty('password'),
             status: FormzStatus.submissionFailure,
           ),

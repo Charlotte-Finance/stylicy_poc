@@ -1,17 +1,17 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poc/models/login/forms/username.dart';
+import 'package:poc/models/login/forms/email.dart';
 void main() {
   const usernameString = 'mock-username';
-  group('Username', () {
+  group('Email', () {
     group('constructors', () {
       test('pure creates correct instance', () {
-        const username = Username.pure();
+        const username = Email.pure();
         expect(username.value, '');
         expect(username.pure, true);
       });
 
       test('dirty creates correct instance', () {
-        const username = Username.dirty(usernameString);
+        const username = Email.dirty(usernameString);
         expect(username.value, usernameString);
         expect(username.pure, false);
       });
@@ -20,14 +20,14 @@ void main() {
     group('validator', () {
       test('returns empty error when username is empty', () {
         expect(
-          const Username.dirty('').error,
-          UsernameValidationError.empty,
+          const Email.dirty('').error,
+          EmailValidationError.empty,
         );
       });
 
       test('is valid when username is not empty', () {
         expect(
-          const Username.dirty(usernameString).error,
+          const Email.dirty(usernameString).error,
           isNull,
         );
       });

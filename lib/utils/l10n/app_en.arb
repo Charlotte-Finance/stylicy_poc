@@ -4,6 +4,10 @@
   "@close_reset": {
     "description": "Title of the button to close the reset pop up"
   },
+  "designers_tab": "Designers",
+  "@designers_tab": {
+    "description": "Designers Tab label"
+  },
   "email_form": "Email address",
   "@email_form": {
     "description": "Email form label"
@@ -11,6 +15,14 @@
   "forget_pwd_button": "Forgot your password ?",
   "@forget_pwd_button": {
     "description": "Label for forgotten password button"
+  },
+  "home_tab": "Home",
+  "@home_tab": {
+    "description": "Home Tab label"
+  },
+  "men_tab": "Men",
+  "@men_tab": {
+    "description": "Men Tab label"
   },
   "password_form": "Password",
   "@password_form": {
@@ -63,5 +75,9 @@
   "skip_login": "Skip this step",
   "@skip_login": {
     "description": "Skip login button label"
+  },
+  "stores_tab": "Stores",
+  "@stores_tab": {
+    "description": "Stores Tab label"
   }
 }

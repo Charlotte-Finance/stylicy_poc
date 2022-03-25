@@ -9,8 +9,11 @@ class _LoginPlatforms extends StatelessWidget {
     return Column(
       children: [
         TextDivider(text: AppLocalizations.of(context)!.platforms_login),
-        Container(
-          width: size.width * 0.4,
+        const SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+          width: size.width * 0.5,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -18,27 +21,36 @@ class _LoginPlatforms extends StatelessWidget {
                 splashRadius: 22,
                 padding: EdgeInsets.zero,
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.facebook,
-                  size: 40,
+                icon: SizedBox(
+                  height: 50,
+                  width: 50,
+                  child: Image.asset(
+                    'assets/logos/google.png',
+                  ),
                 ),
               ),
               IconButton(
                 splashRadius: 22,
                 padding: EdgeInsets.zero,
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.facebook,
-                  size: 40,
+                icon: SizedBox(
+                  child: Image.asset(
+                    'assets/logos/facebook.png',
+                    height: 35,
+                    width: 35,
+                  ),
                 ),
               ),
               IconButton(
                 splashRadius: 22,
                 padding: EdgeInsets.zero,
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.apple,
-                  size: 40,
+                icon: SizedBox(
+                  child: Image.asset(
+                    'assets/logos/apple.png',
+                    height: 35,
+                    width: 35,
+                  ),
                 ),
               ),
             ],

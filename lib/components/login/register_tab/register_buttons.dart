@@ -5,11 +5,27 @@ class _RegisterButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Text(
-        AppLocalizations.of(context)!.register_button.toUpperCase(),
-      ),
+    final Size size = MediaQuery.of(context).size;
+
+    return BlocBuilder<RegisterBloc, RegisterState>(
+      buildWhen: (previous, current) => previous.status != current.status,
+      builder: (context, state) {
+        return ElevatedButton(
+          onPressed: state.status.isValidated
+              ? () {
+            context.read<RegisterBloc>().add(const RegisterSubmitted());
+          }
+              : null,
+          child: SizedBox(
+            width: size.width,
+            child: Center(
+              child: Text(
+                AppLocalizations.of(context)!.register_button.toUpperCase(),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

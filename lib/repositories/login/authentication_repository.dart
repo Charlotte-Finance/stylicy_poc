@@ -5,7 +5,7 @@ import '../../utils/http/http_request.dart';
 import '../../utils/storage/secure_storage.dart';
 
 
-enum AuthenticationStatus { unknown, authenticated, unauthenticated }
+enum AuthenticationStatus { unknown, authenticated, unauthenticated , skipped}
 
 class AuthenticationRepository {
   final String url = "/auth/";
@@ -15,11 +15,17 @@ class AuthenticationRepository {
 
   Stream<AuthenticationStatus> get status async* {
     String? token = await _storage.readSecureData('token');
-    yield token == null ?  AuthenticationStatus.unauthenticated : AuthenticationStatus.authenticated ;
+    yield token == null ?  AuthenticationStatus.unauthenticated :  token == '' ? AuthenticationStatus.skipped :AuthenticationStatus.authenticated;
     yield* _controller.stream;
   }
 
-  Future<void> logIn({required String username, required String password}) async {
+  Future<void> skipLogIn() async {
+    _storage.writeSecureData('token', '');
+    _controller.add(AuthenticationStatus.skipped);
+  }
+
+  Future<void> logIn({required String email, required String password}) async {
+    // ToDo : real request
     String jsonBody = jsonEncode(<String, String>{
       'username': 'mor_2314',
       'password': '83r5^_',
