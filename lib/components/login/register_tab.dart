@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -16,26 +17,30 @@ class RegisterTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
     final Size size = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.only(left: size.width*0.1, right: size.width*0.1),
-      child: Column(
-        children: [
-          SizedBox(height: size.height * 0.02),
-          SizedBox(
-            height: size.height * 0.32,
-            child: const _RegisterForm(),
-          ),
-          SizedBox(
-            width: size.width * 0.5,
-            child: const _RegisterButtons(),
-          ),
-          const Expanded(
-              child: SizedBox.shrink(),
-          ),
-          const _RegisterConditions(
-          ),
-        ],
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            SizedBox(height: size.height * 0.02),
+            SizedBox(
+              height: size.height * 0.32,
+              child: _RegisterForm(formKey:_formKey),
+            ),
+            SizedBox(
+              width: size.width * 0.5,
+              child: _RegisterButtons(formKey: _formKey,),
+            ),
+            const Expanded(
+                child: SizedBox.shrink(),
+            ),
+            const _RegisterConditions(
+            ),
+          ],
+        ),
       ),
     );
   }

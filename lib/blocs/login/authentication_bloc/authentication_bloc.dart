@@ -47,13 +47,11 @@ class AuthenticationBloc
       case AuthenticationStatus.unauthenticated:
         return emit(const AuthenticationState.unauthenticated());
       case AuthenticationStatus.authenticated:
-        print("ON EST AUTH");
         final user = await _tryGetUser();
         return emit(user != null
             ? AuthenticationState.authenticated(user)
             : const AuthenticationState.unauthenticated());
       case AuthenticationStatus.skipped:
-        print("ON SKIP");
         return emit(const AuthenticationState.skipped());
       default:
         return emit(const AuthenticationState.unknown());

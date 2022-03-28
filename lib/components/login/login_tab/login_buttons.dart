@@ -1,6 +1,7 @@
 part of '../login_tab.dart';
 
 class _LoginButtons extends StatelessWidget {
+
   const _LoginButtons({Key? key}) : super(key: key);
 
   @override
@@ -20,6 +21,7 @@ class _LoginButtons extends StatelessWidget {
 }
 
 class _LoginButton extends StatelessWidget {
+
   const _LoginButton();
 
   @override

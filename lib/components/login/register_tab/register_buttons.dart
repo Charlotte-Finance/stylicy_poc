@@ -1,7 +1,10 @@
 part of '../register_tab.dart';
 
 class _RegisterButtons extends StatelessWidget {
-  const _RegisterButtons({Key? key}) : super(key: key);
+  final GlobalKey<FormState> formKey;
+
+  const _RegisterButtons({Key? key, required this.formKey})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +16,10 @@ class _RegisterButtons extends StatelessWidget {
         return ElevatedButton(
           onPressed: state.status.isValidated
               ? () {
-            context.read<RegisterBloc>().add(const RegisterSubmitted());
-          }
+                  if (formKey.currentState!.validate()) {
+                    context.read<RegisterBloc>().add(const RegisterSubmitted());
+                  }
+                }
               : null,
           child: SizedBox(
             width: size.width,

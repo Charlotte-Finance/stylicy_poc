@@ -20,6 +20,14 @@
   "@home_tab": {
     "description": "Home Tab label"
   },
+  "invalid_email": "รูปแบบอีเมลไม่ถูกต้อง",
+  "@invalid_email": {
+    "description": "Error message when the email format is not correct"
+  },
+  "invalid_password": "รหัสผ่านต้องมีความยาวมากกว่า 8 ตัวอักษร",
+  "@invalid_password": {
+    "description": "Error message when the password format is not correct"
+  },
   "men_tab": "ผู้ชาย",
   "@men_tab": {
     "description": "Men Tab label"

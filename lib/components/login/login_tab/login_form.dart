@@ -30,17 +30,15 @@ class _EmailInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginBloc, LoginState>(
-      buildWhen: (previous, current) =>
-          previous.email != current.email,
+      buildWhen: (previous, current) => previous.email != current.email,
       builder: (context, state) {
-        return TextField(
+        return TextFormField(
           textInputAction: TextInputAction.next,
           onChanged: (email) =>
               context.read<LoginBloc>().add(LoginEmailChanged(email: email)),
           decoration: InputDecoration(
             prefixIcon: const Icon(Icons.alternate_email_outlined),
             labelText: AppLocalizations.of(context)!.email_form.toUpperCase(),
-            errorText: state.email.invalid ? 'invalid email' : null,
           ),
         );
       },
@@ -56,10 +54,9 @@ class _PasswordInput extends StatelessWidget {
     return BlocBuilder<LoginBloc, LoginState>(
       buildWhen: (previous, current) =>
           previous.password != current.password ||
-              previous.status != current.status ||
+          previous.status != current.status ||
           previous.obscurePassword != current.obscurePassword,
       builder: (context, state) {
-        print(state.status.toString());
         return TextFormField(
           onFieldSubmitted: (_) {
             if (state.status.isValidated) {
@@ -74,16 +71,18 @@ class _PasswordInput extends StatelessWidget {
           decoration: InputDecoration(
             prefixIcon: const Icon(Icons.lock),
             suffixIcon: IconButton(
-              icon: const Icon(Icons.visibility_outlined),
+              icon: Icon(state.obscurePassword
+                  ? Icons.visibility_off_outlined
+                  : Icons.visibility_outlined),
               onPressed: () {
                 context
                     .read<LoginBloc>()
                     .add(const LoginPasswordVisibilityChanged());
               },
+
             ),
             labelText:
                 AppLocalizations.of(context)!.password_form.toUpperCase(),
-            errorText: state.email.invalid ? 'invalid password' : null,
           ),
         );
       },

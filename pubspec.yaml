@@ -55,6 +55,7 @@ dependencies:
   dots_indicator: ^2.1.0
   loading_indicator: ^3.0.3
   keyboard_actions: ^3.4.7
+  email_validator: ^2.0.1
 
 
 dev_dependencies:

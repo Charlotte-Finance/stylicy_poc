@@ -20,6 +20,14 @@
   "@home_tab": {
     "description": "Home Tab label"
   },
+  "invalid_email": "Invalid email format",
+  "@invalid_email": {
+    "description": "Error message when the email format is not correct"
+  },
+  "invalid_password": "Password must be more than 8 characters",
+  "@invalid_password": {
+    "description": "Error message when the password format is not correct"
+  },
   "men_tab": "Men",
   "@men_tab": {
     "description": "Men Tab label"
