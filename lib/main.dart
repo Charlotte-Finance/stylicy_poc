@@ -21,8 +21,21 @@ import 'blocs/login/login_bloc/login_bloc.dart';
 import 'blocs/login/register_bloc/register_bloc.dart';
 import 'blocs/login/reset_password_bloc/forgot_password_bloc.dart';
 import 'blocs/products/product_list_bloc/product_list_bloc.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart'; // generated via `flutterfire` CLI
+import 'package:firebase_auth/firebase_auth.dart';
 void main() async {
+  // Firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+
+
+
+
+
   // Allow to use native code
   WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setSystemUIOverlayStyle(MySystemUiOverlayStyle.dark);

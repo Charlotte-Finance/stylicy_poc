@@ -8,7 +8,6 @@ class UserRepository {
 
   Future<User?> getUser() async {
     // ToDo : real request
-    print("AAAAAAAAAAAAAAAAAAAAAA");
     final user = await HttpRequest.getRequest(
       endpoint: url + "1/",
     );

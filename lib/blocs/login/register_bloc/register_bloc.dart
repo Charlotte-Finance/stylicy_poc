@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
@@ -65,9 +66,13 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     if (state.status.isValidated) {
       emit(state.copyWith(status: FormzStatus.submissionInProgress));
       try {
-        await _userRepository.postUser(
-            email: state.email.value, password: state.password.value);
-        await _authenticationRepository.logIn(
+        final FirebaseAuth _auth = FirebaseAuth.instance;
+        final User? user = (await
+        _auth.createUserWithEmailAndPassword(
+          email: state.email.value,
+          password: state.password.value,
+        )).user;
+        await _authenticationRepository.signIn(
             email: state.email.value, password: state.password.value);
         emit(state.copyWith(status: FormzStatus.submissionSuccess));
       } catch (_) {

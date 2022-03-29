@@ -19,7 +19,7 @@ class GoogleBloc extends Bloc<GoogleEvent, GoogleState> {
       GoogleLoginRequested event, Emitter<GoogleState> emit) async {
     emit(state.copyWith(status: GoogleStatus.loading));
     try {
-      await authenticationRepository.googleLogIn();
+      await authenticationRepository.signInWithGoogle();
       return emit(
         state.copyWith(
           status: GoogleStatus.success,

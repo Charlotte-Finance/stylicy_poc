@@ -19,7 +19,7 @@ class FacebookBloc extends Bloc<FacebookEvent, FacebookState> {
       FacebookLoginRequested event, Emitter<FacebookState> emit) async {
     emit(state.copyWith(status: FacebookStatus.loading));
     try {
-      await authenticationRepository.facebookLogIn();
+      await authenticationRepository.signInWithFacebook();
       return emit(
         state.copyWith(
           status: FacebookStatus.success,
