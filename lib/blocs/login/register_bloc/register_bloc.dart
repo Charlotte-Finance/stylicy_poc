@@ -1,17 +1,14 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
+import '../../../models/login/forms/email.dart';
 import '../../../models/login/forms/formz.dart';
 import '../../../models/login/forms/password.dart';
-import '../../../models/login/forms/email.dart';
 import '../../../repositories/login/user_repository.dart';
 
 part 'register_event.dart';
-
 part 'register_state.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {

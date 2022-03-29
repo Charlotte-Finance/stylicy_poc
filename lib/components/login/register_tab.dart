@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:poc/models/login/forms/formz.dart';
 
-import '../../blocs/login/login_bloc/login_bloc.dart';
 import '../../blocs/login/register_bloc/register_bloc.dart';
 
 part 'register_tab/register_buttons.dart';

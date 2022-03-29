@@ -1,13 +1,14 @@
 
 import '../../models/login/user/user.dart';
-import '../../utils/http/http_request.dart';
+import '../../utils/apis/http_request.dart';
 
 
 class UserRepository {
   final String url = "/users/";
 
-  Future<User> getUser() async {
+  Future<User?> getUser() async {
     // ToDo : real request
+    print("AAAAAAAAAAAAAAAAAAAAAA");
     final user = await HttpRequest.getRequest(
       endpoint: url + "1/",
     );

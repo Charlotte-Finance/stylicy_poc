@@ -5,9 +5,8 @@ import '../../../models/login/forms/email.dart';
 import '../../../models/login/forms/formz.dart';
 import '../../../repositories/login/email_repository.dart';
 
-part 'forgot_password_state.dart';
-
 part 'forgot_password_event.dart';
+part 'forgot_password_state.dart';
 
 class ForgotPasswordBloc extends Bloc<ResetPasswordEvent, ForgotPasswordState> {
   final EmailRepository _emailRepository;

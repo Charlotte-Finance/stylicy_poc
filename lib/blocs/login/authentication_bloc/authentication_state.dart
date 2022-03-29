@@ -16,9 +16,11 @@ class AuthenticationState extends Equatable {
   const AuthenticationState.skipped()
       : this._(status: AuthenticationStatus.skipped, user: User.empty);
 
+  const AuthenticationState.facebook(User user)
+      : this._(status: AuthenticationStatus.facebook, user: user);
+
   const AuthenticationState.unauthenticated()
       : this._(status: AuthenticationStatus.unauthenticated);
-
 
   final AuthenticationStatus status;
   final User user;

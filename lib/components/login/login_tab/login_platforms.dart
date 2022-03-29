@@ -17,30 +17,8 @@ class _LoginPlatforms extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(
-                splashRadius: 22,
-                padding: EdgeInsets.zero,
-                onPressed: () {},
-                icon: SizedBox(
-                  height: 50,
-                  width: 50,
-                  child: Image.asset(
-                    'assets/logos/google.png',
-                  ),
-                ),
-              ),
-              IconButton(
-                splashRadius: 22,
-                padding: EdgeInsets.zero,
-                onPressed: () {},
-                icon: SizedBox(
-                  child: Image.asset(
-                    'assets/logos/facebook.png',
-                    height: 35,
-                    width: 35,
-                  ),
-                ),
-              ),
+              const _Google(),
+              const _Facebook(),
               IconButton(
                 splashRadius: 22,
                 padding: EdgeInsets.zero,
@@ -57,6 +35,60 @@ class _LoginPlatforms extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _Facebook extends StatelessWidget {
+  const _Facebook({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<FacebookBloc, FacebookState>(
+      buildWhen: (previous, current) => previous.status != current.status,
+      builder: (context, state) {
+        return IconButton(
+          splashRadius: 22,
+          padding: EdgeInsets.zero,
+          onPressed: () async {
+            context.read<FacebookBloc>().add(const FacebookLoginRequested());
+          },
+          icon: SizedBox(
+            child: Image.asset(
+              'assets/logos/facebook.png',
+              height: 35,
+              width: 35,
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _Google extends StatelessWidget {
+  const _Google({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<GoogleBloc, GoogleState>(
+      buildWhen: (previous, current) => previous.status != current.status,
+      builder: (context, state) {
+        return  IconButton(
+          splashRadius: 22,
+          padding: EdgeInsets.zero,
+          onPressed: () async {
+            context.read<GoogleBloc>().add(const GoogleLoginRequested());
+          },
+          icon: SizedBox(
+            height: 50,
+            width: 50,
+            child: Image.asset(
+              'assets/logos/google.png',
+            ),
+          ),
+        );
+      },
     );
   }
 }

@@ -76,7 +76,7 @@ class HttpRequest {
     Map<String, dynamic>? queryParameters,
   }) {
     return Uri(
-      scheme: "http",
+      scheme: "https",
       path: endpoint,
       port: _port,
       host: _host,

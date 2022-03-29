@@ -1,11 +1,19 @@
 import 'dart:async';
 import 'dart:convert';
 
-import '../../utils/http/http_request.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+
+import '../../utils/apis/http_request.dart';
 import '../../utils/storage/secure_storage.dart';
 
-
-enum AuthenticationStatus { unknown, authenticated, unauthenticated , skipped}
+enum AuthenticationStatus {
+  unknown,
+  authenticated,
+  unauthenticated,
+  skipped,
+  facebook,
+  google
+}
 
 class AuthenticationRepository {
   final String url = "/auth/";
@@ -15,8 +23,17 @@ class AuthenticationRepository {
 
   Stream<AuthenticationStatus> get status async* {
     String? token = await _storage.readSecureData('token');
-    yield token == null ?  AuthenticationStatus.unauthenticated :  token == '' ? AuthenticationStatus.skipped :AuthenticationStatus.authenticated;
+    yield token == null
+        ? AuthenticationStatus.unauthenticated
+        : token == ''
+            ? AuthenticationStatus.skipped
+            : AuthenticationStatus.authenticated;
     yield* _controller.stream;
+  }
+
+  Future<String?> get token async {
+    String? token = await _storage.readSecureData('token');
+    return token;
   }
 
   Future<void> skipLogIn() async {
@@ -36,6 +53,17 @@ class AuthenticationRepository {
     );
     _storage.writeSecureData('token', response['token']);
     _controller.add(AuthenticationStatus.authenticated);
+  }
+
+  Future<void> facebookLogIn() async {
+    final LoginResult result = await FacebookAuth.instance.login();
+    _storage.writeSecureData('token', result.accessToken!.token);
+    _controller.add(AuthenticationStatus.facebook);
+  }
+
+  Future<void> googleLogIn() async {
+
+    _controller.add(AuthenticationStatus.google);
   }
 
   logOut() {

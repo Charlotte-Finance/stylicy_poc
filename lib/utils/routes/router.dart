@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:poc/pages/counter/count_page.dart';
 import 'package:poc/pages/login_page.dart';
-import 'package:poc/pages/splash_page.dart';
 import 'package:poc/pages/product/product_page.dart';
+import 'package:poc/pages/splash_page.dart';
 
 import '../../pages/home_page.dart';
 import 'constants.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
@@ -6,6 +7,7 @@ import 'package:poc/blocs/bloc_observer.dart';
 import 'package:poc/blocs/home/home/carousel/carousel_bloc.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 import 'package:poc/repositories/login/email_repository.dart';
+import 'package:poc/repositories/login/facebook_repository.dart';
 import 'package:poc/repositories/login/user_repository.dart';
 import 'package:poc/repositories/products/product_repository.dart';
 
@@ -13,6 +15,8 @@ import 'app.dart';
 import 'blocs/counter/counter_bloc.dart';
 import 'blocs/home/navigation/navigation_cubit.dart';
 import 'blocs/login/authentication_bloc/authentication_bloc.dart';
+import 'blocs/login/facebook_bloc/facebook_bloc.dart';
+import 'blocs/login/google_bloc/google_bloc.dart';
 import 'blocs/login/login_bloc/login_bloc.dart';
 import 'blocs/login/register_bloc/register_bloc.dart';
 import 'blocs/login/reset_password_bloc/forgot_password_bloc.dart';
@@ -28,6 +32,10 @@ void main() async {
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
 
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
   HydratedBlocOverrides.runZoned(
     () {
       runApp(
@@ -36,6 +44,7 @@ void main() async {
             RepositoryProvider(create: (_) => AuthenticationRepository()),
             RepositoryProvider(create: (_) => UserRepository()),
             RepositoryProvider(create: (_) => EmailRepository()),
+            RepositoryProvider(create: (_) => FacebookRepository()),
             RepositoryProvider(create: (_) => ProductRepository()),
           ],
           child: MultiBlocProvider(
@@ -45,6 +54,7 @@ void main() async {
                   authenticationRepository:
                       context.read<AuthenticationRepository>(),
                   userRepository: context.read<UserRepository>(),
+                  facebookRepository: context.read<FacebookRepository>(),
                 ),
               ),
               BlocProvider<LoginBloc>(
@@ -62,10 +72,19 @@ void main() async {
               ),
               BlocProvider<ForgotPasswordBloc>(
                 create: (BuildContext context) => ForgotPasswordBloc(
-                  emailRepository:
-                  context.read<EmailRepository>(),
+                  emailRepository: context.read<EmailRepository>(),
                 ),
               ),
+              BlocProvider<FacebookBloc>(
+                create: (BuildContext context) => FacebookBloc(
+                  authenticationRepository: context.read<AuthenticationRepository>(),
+                ),
+              ),   BlocProvider<GoogleBloc>(
+                create: (BuildContext context) => GoogleBloc(
+                  authenticationRepository: context.read<AuthenticationRepository>(),
+                ),
+              ),
+
               BlocProvider<NavigationCubit>(
                   create: (BuildContext context) => NavigationCubit()),
               BlocProvider<CarouselBloc>(

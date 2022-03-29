@@ -8,8 +8,6 @@ import 'package:poc/pages/login_page.dart';
 import 'package:poc/pages/splash_page.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 import 'package:poc/styles/theme.dart';
-import 'package:poc/utils/routes/constants.dart';
-import 'package:poc/utils/routes/router.dart';
 
 import 'blocs/login/authentication_bloc/authentication_bloc.dart';
 import 'blocs/login/register_bloc/register_bloc.dart';
@@ -58,6 +56,12 @@ class _AppViewState extends State<AppView> {
                 _navigator.pushAndRemoveUntil<void>(
                   HomePage.route(),
                   (route) => false,
+                );
+                break;
+              case AuthenticationStatus.facebook:
+                _navigator.pushAndRemoveUntil<void>(
+                  HomePage.route(),
+                      (route) => false,
                 );
                 break;
               case AuthenticationStatus.unauthenticated:

@@ -1,6 +1,5 @@
 part of 'forgot_password_bloc.dart';
 
-
 class ForgotPasswordState extends Equatable {
   final FormzStatus status;
   final Email email;

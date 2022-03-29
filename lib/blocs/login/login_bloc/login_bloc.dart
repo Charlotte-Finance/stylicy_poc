@@ -1,15 +1,13 @@
 import 'package:bloc/bloc.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:poc/repositories/login/authentication_repository.dart';
 
+import '../../../models/login/forms/email.dart';
 import '../../../models/login/forms/formz.dart';
 import '../../../models/login/forms/password.dart';
-import '../../../models/login/forms/email.dart';
 
 part 'login_event.dart';
-
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
